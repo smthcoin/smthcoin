@@ -42,8 +42,8 @@ reachable from the Tor network. Add these lines to your /etc/tor/torrc (or equiv
 config file):
 
 	HiddenServiceDir /var/lib/tor/smthcoin-service/
-	HiddenServicePort 9333 127.0.0.1:9333
-	HiddenServicePort 19335 127.0.0.1:19335
+	HiddenServicePort 9333 127.0.0.1:9569
+	HiddenServicePort 19335 127.0.0.1:19569
 
 The directory can be different of course, but (both) port numbers should be equal to
 your smthcoind's P2P listen port (9333 by default).
@@ -81,7 +81,7 @@ as well, use `discover` instead:
 
 	./smthcoind ... -discover
 
-and open port 9333 on your firewall (or use -upnp).
+and open port 9569 on your firewall (or use -upnp).
 
 If you only want to use Tor to reach onion addresses, but not use it as a proxy
 for normal IPv4/IPv6 communication, use:
